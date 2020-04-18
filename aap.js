@@ -27,12 +27,26 @@ const fifteen = inventors.filter(function (inventor) {
 console.log(fifteen);
 console.table(fifteen);
 
+
 // Array.prototype.map()
-    // 2. Give us an array of the inventors first and last names
-    const fullName = inventors.map(function (inventor) {
-       return `${inventor.first} ${inventor.last}`
-    });
-    console.table(fullName);
+// 2. Give us an array of the inventors first and last names
+const fullName = inventors.map(function (inventor) {
+    return `${inventor.first} ${inventor.last}`
+});
+console.table(fullName);
+
+
+// Array.prototype.sort()
+// 3. Sort the inventors by birthdate, oldest to youngest
+const oldestToYoungest = inventors.sort(function (a, b) {
+    if (a.year > b.year) {
+        return 1;
+    } else {
+        return -1;
+    }
+
+});
+console.table(oldestToYoungest);
 
 
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
