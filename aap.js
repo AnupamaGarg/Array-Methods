@@ -27,5 +27,12 @@ const fifteen = inventors.filter(function (inventor) {
 console.log(fifteen);
 console.table(fifteen);
 
+// Array.prototype.map()
+    // 2. Give us an array of the inventors first and last names
+    const fullName = inventors.map(function (inventor) {
+       return `${inventor.first} ${inventor.last}`
+    });
+    console.table(fullName);
+
 
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
