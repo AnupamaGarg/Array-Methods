@@ -82,9 +82,19 @@ const yearsLived = inventors.sort(function (a, b) {
  console.table(yearsLived);
 
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
-const people = [
+
+const people1 = [
     { name: 'Wes', year: 1988 },
     { name: 'Kait', year: 1986 },
     { name: 'Irv', year: 1970 },
     { name: 'Lux', year: 2015 }
   ];
+ 
+  const IsAdult = people1.some(function(person){
+      currentYear= (new Date()).getFullYear();
+      if(currentYear - person.year >= 19){
+          return true;
+      }
+     
+  })
+  console.log(IsAdult);
