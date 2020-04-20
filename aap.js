@@ -140,3 +140,5 @@ const comments = [
         }
     });
     console.log(index);
+    comments.splice(index,1);
+    console.table(comments)
