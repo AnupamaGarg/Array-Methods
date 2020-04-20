@@ -98,3 +98,14 @@ const people1 = [
      
   })
   console.log(IsAdult);
+
+  // Array.prototype.every() // is everyone 19 or older?
+
+  const checkAllAdult = people1.every(function(person){
+    currentYear= (new Date()).getFullYear();
+    if(currentYear - person.year >= 19){
+        return true;
+    }
+   
+})
+console.log(checkAllAdult );
