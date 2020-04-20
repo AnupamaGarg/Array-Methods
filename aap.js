@@ -39,6 +39,7 @@ console.table(fullName);
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
 const oldestToYoungest = inventors.sort(function (a, b) {
+   //return a.year - b.year;
     if (a.year > b.year) {
         return 1;
     } else {
@@ -47,6 +48,16 @@ const oldestToYoungest = inventors.sort(function (a, b) {
 
 });
 console.table(oldestToYoungest);
+
+
+// Array.prototype.reduce()
+    // 4. How many years did all the inventors live all together?
+
+const totalYears = inventors.reduce(function(total,inventor){
+return total + (inventor.passed - inventor.year);
+
+},0);
+console.table(totalYears);
 
 
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
